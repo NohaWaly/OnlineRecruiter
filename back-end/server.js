@@ -2,38 +2,19 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors')
-const mysql = require('mysql');
-const mySqlEasier = require('mysql-easier');
+
 
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 
-// Connect to the MySql DB
-// const connection = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'user',
-//   password: 'password',
-//   database: 'database name'
-// });
-// connection.connect((err) => {
-//   if (err) throw err;
-//   console.log('Connected!');
-// });
-
-
-// OR Using mySqlEasier
-// mySqlEasier.configure({
-//     host: 'localhost',
-//     user: 'myuser',
-//     password: 'super-secret'
-//   });
-// const myConn = mySqlEasier.createConnection({
-//     host: 'localhost',
-//     user: 'myuser',
-//     password: 'super-secret'
-//     });
-
+const db = knex({
+    client: 'mysql',
+    connection: {
+        connectionString: process.env.DATABASE_URL,
+        ssl: true
+    }
+});
 
 
 const app = express();
