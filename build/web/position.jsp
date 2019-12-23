@@ -17,6 +17,8 @@
     <!--bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <!--icons-->
@@ -44,6 +46,38 @@
         </div>
         <div class="row">
             <div class="col">
+                
+                <!--start entering cv-->
+                         <!-- start Sign in form-->
+          <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Complete your application</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body mx-3">
+        
+                <div class="md-form mb-4">
+                  <i class="fas fa-lock prefix grey-text"></i>
+                  <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                  <input type="password" id="defaultForm-pass" class="form-control validate">
+                 
+                </div>
+            </div>
+             
+              <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-default">Login</button>
+             
+            </div>
+          </div>
+        </div>
+    </div>
+         <!-- end Sign in form-->
+                <!--end entering cv -->
                 <!--Confirmation msg-->
                 <div id="popupmsg">
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
